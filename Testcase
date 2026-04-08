@@ -1,0 +1,64 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+import time
+
+# Start browser
+driver = webdriver.Chrome()
+
+# Open OpenEMR demo site
+driver.get("https://www.open-emr.org/demo/")
+driver.maximize_window()
+
+time.sleep(3)
+
+# Switch to demo login page (click demo button if needed)
+driver.get("https://demo.openemr.io/openemr/interface/login/login.php")
+
+time.sleep(3)
+
+# ----------- TC01: Valid Login -----------
+username = driver.find_element(By.ID, "authUser")
+password = driver.find_element(By.ID, "clearPass")
+
+username.send_keys("admin")
+password.send_keys("pass")
+
+password.send_keys(Keys.RETURN)
+
+time.sleep(5)
+
+print("TC01: Valid Login Executed")
+
+# ----------- TC02: Invalid Login -----------
+driver.get("https://demo.openemr.io/openemr/interface/login/login.php")
+time.sleep(3)
+
+username = driver.find_element(By.ID, "authUser")
+password = driver.find_element(By.ID, "clearPass")
+
+username.send_keys("wrong")
+password.send_keys("wrong")
+
+password.send_keys(Keys.RETURN)
+
+time.sleep(3)
+
+print("TC02: Invalid Login Executed")
+
+# ----------- TC03: Empty Login -----------
+driver.get("https://demo.openemr.io/openemr/interface/login/login.php")
+time.sleep(3)
+
+username = driver.find_element(By.ID, "authUser")
+password = driver.find_element(By.ID, "clearPass")
+
+# No input
+password.send_keys(Keys.RETURN)
+
+time.sleep(3)
+
+print("TC03: Empty Login Executed")
+
+# Close browser
+driver.quit()
