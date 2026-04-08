@@ -16,9 +16,6 @@ time.sleep(5)
 
 print("Logged in successfully")
 
-# NOTE:
-# Appointment automation in OpenEMR is complex (iframe + dynamic UI)
-# So we simulate navigation
 
 try:
     driver.find_element(By.LINK_TEXT, "Calendar").click()
