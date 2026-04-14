@@ -1,8 +1,7 @@
 # Capstone Testing Project
 
 ## Project Title
-Hospital Patient Portal System (MyChart-Inspired)
-
+Hospital Patient Portal System 
 ## Course
 CMP1979 – Modern Software Development
 
