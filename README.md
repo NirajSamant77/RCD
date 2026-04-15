@@ -1,51 +1,59 @@
-# Capstone Testing Project
+# Capstone Testing Project – Hospital Patient Portal System
 
-## Project Title
-Hospital Patient Portal System 
 ## Course
-CMP1979 – Modern Software Development
+CMP1979 – Modern Software Development  
 
 ## Team Members
-- Sagar  
+- Sagar Dhital  
 - Niraj Samant  
-- Hiraj  
+- Hiraj Patel  
 
 ## Project Overview
-This project focuses on testing a Hospital Patient Portal System inspired by Canadian healthcare platforms such as MyChart. The system allows patients to manage their healthcare services online, including booking appointments, viewing medical records, and accessing lab results.
+This project focuses on testing a Hospital Patient Portal System using the OpenEMR Demo platform. The system allows patients to interact with healthcare services digitally, including logging in, scheduling appointments, and managing appointments.
 
-The goal of this project is to apply structured testing techniques to ensure the system is reliable, user-friendly, and efficient.
+The objective of this project is to apply structured software testing techniques to evaluate system functionality, usability, and reliability.
 
-## Key Features / Workflows
-- User Login / Authentication  
-- Appointment Booking and Management  
-- Medical Records Access  
-- Lab Results Viewing  
+## Workflows Tested
+- User Login and Authentication  
+- Appointment Scheduling  
+- Appointment Management  
 
-## Scope
-### In Scope
-- Functional testing of login system  
-- Appointment booking and updates  
-- Viewing medical records  
-- Input validation  
+## Testing Activities
+- Black-box testing (TC01–TC10)  
+- Exploratory testing (2 sessions)  
+- Defect investigation (3 defects identified)  
+- Automation testing using Selenium  
+- Usability testing  
 
-### Out of Scope
-- Payment systems  
-- Backend database validation  
-- Advanced security testing  
+## Key Defects Identified
+- D01: Empty login accepted (missing validation)  
+- D02: Duplicate appointment booking allowed  
+- D03: Unauthorized access to appointment page without login  
 
-## Test Strategy
-A risk-based testing approach is used to prioritize critical functionalities such as login, appointment booking, and data accuracy. The following testing methods are applied:
-- Black-box testing  
-- Exploratory testing  
-- Basic automation (if applicable)  
-
-## Tools Used
-- GitHub (Version Control)  
-- Azure DevOps (Task Management)  
-- Microsoft Word (Documentation)  
-## Project Status
-The project is currently in the initial development phase. Core components such as application overview, scope, workflows, and test strategy have been defined.
-
----
+## Tools and Technologies
+- GitHub – Version control and repository management  
+- Azure DevOps – Task tracking and defect management  
+- Selenium (Python) – Automation testing  
+- Microsoft Word – Documentation  
 
 ## Repository Structure
+
+/tests              → Test cases documentation  
+/evidence           → Screenshots of test results  
+/models             → State diagram  
+/automation         → Selenium test scripts  
+/.github/workflows  → GitHub Actions pipeline  
+
+## Automation
+Basic Selenium scripts were developed to test login and appointment workflows. Screenshots were captured during execution as evidence of test results.
+
+## Project Links
+- GitHub Repository: https://github.com/NirajSamant77/RCD/tree/main  
+- Word Report: (Add your link here)  
+- Azure DevOps: (Add your link here)  
+
+## Project Status
+The project is complete. Testing activities have been performed, defects have been identified, and recommendations have been provided for system improvement.
+
+## Summary
+This project demonstrates the application of software testing techniques in a healthcare system environment. The findings highlight the importance of input validation, secure access control, and reliable appointment management.
